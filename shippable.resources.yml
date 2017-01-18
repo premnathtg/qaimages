@@ -27,7 +27,7 @@ resources:
         - selchrome-test
 
         
-  - name: selenium
+  - name: selchrome
     type: cluster
     integration: az-ecs
     pointer:

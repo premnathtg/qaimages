@@ -11,6 +11,6 @@ jobs:
     steps:
       - IN: selchrome-manifest
       - IN: docker-opts-1
-      - IN: selenium
+      - IN: selchrome
       - TASK: managed
         deployMethod: replace
