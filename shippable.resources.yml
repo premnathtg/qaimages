@@ -1,0 +1,35 @@
+resources:
+  - name: selchrome-python
+    type: image
+    integration: Amazon-DEV
+    pointer:
+      sourceName: "680976004409.dkr.ecr.us-east-1.amazonaws.com/selenium"
+      isPull: false
+    seed:
+      versionName: "selenium-py.8"
+      
+  - name: selchrome-test
+    type: image
+    integration: Amazon-DEV
+    pointer:
+      sourceName: "680976004409.dkr.ecr.us-east-1.amazonaws.com/selenium"
+      isPull: false
+    seed:
+      versionName: "selenium-t.13"
+
+  - name: docker-opts
+    type: dockerOptions
+    version:
+      portMappings:
+        - 80:80
+    links:
+        - selchrome-python
+        - selchrome-test
+
+        
+  - name: selenium
+    type: cluster
+    integration: az-ecs
+    pointer:
+      sourceName : "selenium" #name of the cluster to which we are deploying
+      region: "us-east-1"

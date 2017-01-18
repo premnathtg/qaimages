@@ -1,0 +1,16 @@
+jobs:
+  - name: selchrome-manifest
+    type: manifest
+    steps:
+     - IN: selchrome-python
+     - IN: selchrome-test
+     - TASK: managed
+
+  - name: selchrome-deploy
+    type: deploy
+    steps:
+      - IN: selchrome-manifest
+      - IN: docker-opts
+      - IN: selenium
+      - TASK: managed
+        deployMethod: replace
