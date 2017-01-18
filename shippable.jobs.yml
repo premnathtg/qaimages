@@ -4,6 +4,7 @@ jobs:
     steps:
      - IN: selchrome-python
      - IN: selchrome-test
+     - IN: selchrome-test-1
      - TASK: managed
 
   - name: selchrome-deploy

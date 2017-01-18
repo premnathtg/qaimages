@@ -16,6 +16,15 @@ resources:
       isPull: false
     seed:
       versionName: "selenium-t.13"
+      
+  - name: selchrome-test-1
+    type: image
+    integration: Amazon-DEV
+    pointer:
+      sourceName: "680976004409.dkr.ecr.us-east-1.amazonaws.com/selenium"
+      isPull: false
+    seed:
+      versionName: "selenium-t.3"
 
   - name: docker-opts-1
     type: dockerOptions
@@ -25,7 +34,7 @@ resources:
     links:
         - selchrome-python
         - selchrome-test
-
+        - selchrome-test-1
         
   - name: selchrome
     type: cluster
