@@ -17,7 +17,7 @@ resources:
     seed:
       versionName: "selenium-t.13"
 
-  - name: docker-opts
+  - name: docker-opts-1
     type: dockerOptions
     version:
       portMappings:
