@@ -21,7 +21,7 @@ resources:
     type: dockerOptions
     version:
       portMappings:
-        - 80:80
+        - 0:80
     links:
         - selchrome-python
         - selchrome-test
